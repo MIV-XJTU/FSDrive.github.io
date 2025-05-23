@@ -218,7 +218,7 @@
     <h2 class="title is-2">Qualitative results</h2>
             <div class="hero-body" style="text-align: center">
                 <div class="columns is-centered">
-                     <img src="./static/images/vis.jpg" alt="Description of the image" style="max-width: 100%; height: auto;" />
+                     <img src="./static/images/vis.png" alt="Description of the image" style="max-width: 100%; height: auto;" />
                 </div>
             </div>
   </div>
@@ -226,8 +226,7 @@
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <p>
-            Qualitative results with and w/o online local prior. Prior maps can help restore obscured map 
-            elements and make predictions more complete and accurate.
+            Qualitative analysis of our CoT. The red trajectory is the prediction and the green is the GT.
           </p>
         </div>
       </div>
@@ -240,7 +239,7 @@
         <h2 class="title is-2">Main results</h2>
             <div class="hero-body" style="text-align: center">
                 <div class="columns is-centered">
-                     <img src="./static/images/result.png" alt="Description of the image" style="max-width: 100%; height: auto;" />
+                     <img src="./static/images/main.jpg" alt="Description of the image" style="max-width: 100%; height: auto;" />
                 </div>
             </div>
   </div>
@@ -248,11 +247,10 @@
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <p>
-            Performance of various online mapping models with different prior maps on nuScenes within a 60m x 30m perception range.
-            “C” denotes camera input. The best results using the same backbone are highlighted in bold. The SD map is sourced from 
-            OpenStreetMap. The online local map refers to the historical prediction results. As the
-            nuScenes dataset lacks existing HD maps, we followed the approach of MapEX to create an HD map-EX*, simulating
-            existing HD maps by removing pedestrian crossings and lane dividers, while retaining only the road boundaries.
+            End-to-end trajectory planning experiments on nuScenes. We evaluated the L2 and collision metrics 
+            based on the distinct computational methodologies of ST-P3 and UniAD, respectively. * indicates that
+            the ego status is additionally used. VAD and UniAD results are derived from BEV-Planner, while the 
+            remaining results are sourced from their respective papers.
           </p>
         </div>
       </div>
