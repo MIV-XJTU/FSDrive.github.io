@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Driving with Prior Maps: Unified Vector Prior Encoding for Autonomous Vehicle Mapping.">
+        content="FutureSightDrive: Thinking Visually with Spatio-Temporal CoT for Autonomous Driving">
   <meta name="keywords" content="Vector HD mapping, Autonomous driving">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Driving with Prior Maps: Unified Vector Prior Encoding for Autonomous Vehicle Mapping</title>
+  <title>FutureSightDrive: Thinking Visually with Spatio-Temporal CoT for Autonomous Driving</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LYK5B1RWXZ"></script>
@@ -147,27 +147,21 @@
         <h2 class="title is-2">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-           High-Definition Maps (HD maps) are essential for the precise navigation and decision-making of autonomous vehicles, 
-            yet their creation and upkeep present significant cost and timeliness challenges. The online construction of HD maps 
-            using on-board sensors has emerged as a promising solution; however, these methods can be impeded by incomplete data 
-            due to occlusions and inclement weather. This paper proposes the PriorDrive framework to addresses these limitations 
-            by harnessing the power of prior maps, significantly enhancing the robustness and accuracy of online HD map construction.
+           Visual language models (VLMs) have attracted increasing interest in autonomous driving due to their powerful 
+            reasoning capabilities. However, existing VLMs typically utilize discrete text Chain-of-Thought (CoT) tailored 
+            to the current scenario, which essentially represents highly abstract and symbolic compression of visual information, 
+            potentially leading to spatio-temporal relationship ambiguity and fine-grained information loss. Is autonomous driving 
+            better modeled on real-world simulation and imagination than on pure symbolic logic? 
           </p>
           <p>
-           Our approach integrates a variety of prior maps, such as OpenStreetMap's Standard Definition Maps (SD maps), outdated HD maps 
-            from vendors, and locally constructed maps from historical vehicle data. To effectively encode this prior information into
-            online mapping models, we introduce a Hybrid Prior Representation (HPQuery) that standardizes the representation of diverse map elements.
-          </p>
-          <p>
-            At the core of PriorDrive is the Unified Vector Encoder (UVE), which employs a dual encoding mechanism to process vector data. 
-            The intra-vector encoder captures fine-grained local features, while the inter-vector encoder integrates global context. Furthermore, 
-            we propose a segment-level and point-level pre-training strategy that enables the UVE to learn the prior distribution of vector data, 
-            thereby improving the encoder's generalizability and performance.
-          </p>
-          <p>
-            Through extensive testing on the nuScenes dataset, we demonstrate that PriorDrive is highly compatible with various online mapping models
-            and substantially improves map prediction capabilities. The integration of prior maps through the PriorDrive framework offers a robust solution 
-            to the challenges of single-perception data, paving the way for more reliable autonomous vehicle navigation.
+           In this paper, we propose a spatio-temporal CoT reasoning method that enables models to think visually. First, VLM serves 
+            as a world model to generate unified image frame for predicting future world states: where perception results (e.g., lane 
+            divider and 3D detection) represent the future spatial relationships, and ordinary future frame represent the temporal evolution 
+            relationships. This spatio-temporal CoT then serves as intermediate reasoning steps, enabling the VLM to function as an inverse 
+            dynamics model for trajectory planning based on current observations and future predictions. To implement visual generation in VLMs,
+            we propose a unified pretraining paradigm integrating visual generation and understanding, along with a progressive visual CoT enhancing 
+            autoregressive image generation. Extensive experimental results demonstrate the effectiveness of the proposed method, advancing autonomous 
+            driving towards visual reasoning.
           </p>
         </div>
       </div>
