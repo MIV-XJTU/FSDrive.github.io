@@ -203,38 +203,58 @@
 
 <section class="section">
   <div class="container is-max-desktop">
-            <div class="columns">
-               <h2 class="title is-2">Video</h2>
-            </div>
-    
-        <video width="400" height="120" controls>
-      <source src="./static/images/case1.mp4 " type="video/mp4">
-        </video>
- &nbsp &nbsp
-    <video width="400" height="120" controls>
-      <source src="./static/images/case2.mp4 " type="video/mp4">
-        </video>
+    <h2 class="title is-2 has-text-centered">Video</h2>
 
-    <video width="400" height="120" controls>
-      <source src="./static/images/case3.mp4 " type="video/mp4">
-        </video>
- &nbsp &nbsp
+    <!-- 视频网格 -->
+    <div class="columns is-multiline is-variable is-4">
+      <!-- 视频 1 -->
+      <div class="column is-half">
+        <figure class="image is-4by3 has-text-centered">
+          <video width="400" height="120" controls>
+            <source src="./static/images/case1.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
 
-    <video width="400" height="120" controls>
-      <source src="./static/images/case4.mp4 " type="video/mp4">
-        </video>
-    
-  </div>
-  <div class="content has-text-justified">
-  <p>
-VLM serves as a world model to generate unified image frame for predicting future world states: 
+      <!-- 视频 2 -->
+      <div class="column is-half">
+        <figure class="image is-4by3 has-text-centered">
+          <video width="400" height="120" controls>
+            <source src="./static/images/case2.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+
+      <!-- 视频 3 -->
+      <div class="column is-half">
+        <figure class="image is-4by3 has-text-centered">
+          <video width="400" height="120" controls>
+            <source src="./static/images/case3.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+
+      <!-- 视频 4 -->
+      <div class="column is-half">
+        <figure class="image is-4by3 has-text-centered">
+          <video width="400" height="120" controls>
+            <source src="./static/images/case4.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+    </div>
+
+    <!-- 描述文字 -->
+    <p class="has-text-centered mt-6">
+      VLM serves as a world model to generate unified image frame for predicting future world states: 
     where perception results (e.g., lane divider and 3D detection) represent the future spatial 
     relationships, and ordinary future frame represent the temporal evolution relationships.
 This spatio-temporal CoT then serves as intermediate reasoning steps, enabling the VLM to function 
     as an inverse dynamics model for trajectory planning based on current observations and future predictions.
-  </p>
+    </p>
   </div>
-</section>  
+</section>
+
 
 
 <section class="section">
