@@ -201,69 +201,43 @@
 </section> 
 
 
-<style>
-  /* 自定义列间距和行间距 */
-  .custom-video-columns {
-    margin-bottom: -10rem; /* 减小行间距 */
-  }
-
-  .custom-video-columns .column {
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
-  /* 两端对齐文本 */
-  .text-justify {
-    text-align: justify;
-    text-justify: inter-word; /* 确保兼容性 */
-  }
-</style>
-
 <section class="section">
-  <div class="container is-max-desktop">
-    <h2 class="title is-2 has-text-centered">Video</h2>
+  <div class="container is-max-desktop has-text-centered">
+    <!-- 标题居中 -->
+    <div class="columns is-centered">
+      <h2 class="title is-2">Video</h2>
+    </div>
 
-    <!-- 视频网格 -->
-    <div class="columns is-multiline is-variable is-4 custom-video-columns">
-      <!-- 视频 1 -->
-      <div class="column is-half">
-        <figure class="image is-4by3 has-text-centered">
-          <video width="400" height="120" controls>
+    <!-- 视频容器 -->
+    <div class="video-container">
+      <div class="video-row">
+        <div class="video-wrapper">
+          <video controls>
             <source src="./static/images/case1.mp4" type="video/mp4">
           </video>
-        </figure>
-      </div>
-
-      <!-- 视频 2 -->
-      <div class="column is-half">
-        <figure class="image is-4by3 has-text-centered">
-          <video width="400" height="120" controls>
+        </div>
+        <div class="video-wrapper">
+          <video controls>
             <source src="./static/images/case2.mp4" type="video/mp4">
           </video>
-        </figure>
+        </div>
       </div>
-
-      <!-- 视频 3 -->
-      <div class="column is-half">
-        <figure class="image is-4by3 has-text-centered">
-          <video width="400" height="120" controls>
+      <div class="video-row">
+        <div class="video-wrapper">
+          <video controls>
             <source src="./static/images/case3.mp4" type="video/mp4">
           </video>
-        </figure>
-      </div>
-
-      <!-- 视频 4 -->
-      <div class="column is-half">
-        <figure class="image is-4by3 has-text-centered">
-          <video width="400" height="120" controls>
+        </div>
+        <div class="video-wrapper">
+          <video controls>
             <source src="./static/images/case4.mp4" type="video/mp4">
           </video>
-        </figure>
+        </div>
       </div>
     </div>
 
-    <!-- 描述文字 -->
-    <p class="text-justify mt-6">
+    <!-- 两端对齐文本 -->
+    <p class="has-text-justified">
       VLM serves as a world model to generate unified image frame for predicting future world states: 
       where perception results (e.g., lane divider and 3D detection) represent the future spatial 
       relationships, and ordinary future frame represent the temporal evolution relationships.
@@ -272,6 +246,46 @@
     </p>
   </div>
 </section>
+
+<style>
+/* 自定义样式 */
+.video-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* 控制视频行间距 */
+  margin-bottom: 2rem;
+}
+
+.video-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* 控制视频列间距 */
+  flex-wrap: wrap;
+}
+
+.video-wrapper {
+  flex: 1 1 45%; /* 适应不同屏幕尺寸 */
+  max-width: 400px;
+}
+
+.video-wrapper video {
+  width: 100%;
+  height: auto;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  .video-wrapper {
+    flex: 1 1 100%;
+  }
+}
+
+/* 解决中文字两端对齐问题 */
+.has-text-justified {
+  text-align: justify;
+  text-justify: inter-ideograph; /* 中文特殊处理 */
+}
+</style>
 
 
 
