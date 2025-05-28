@@ -207,21 +207,34 @@
             <div class="columns">
                <h2 class="title is-2">Video</h2>
             </div>
-            <div class="hero-body" style="text-align: center">
-                <div class="columns is-centered">
-                  <video poster="" autoplay="" muted="" loop="" style="pointer-events: none;">
-                    <source src="./static/images/video.mp4" type="video/mp4">
-                  </video>
-                </div>
-            </div>
     
-        <video width="360" height="120" controls>
+        <video width="480" height="120" controls>
       <source src="./static/images/case1.mp4 " type="video/mp4">
+        </video>
+
+    <video width="480" height="120" controls>
+      <source src="./static/images/case2.mp4 " type="video/mp4">
+        </video>
+
+    <video width="480" height="120" controls>
+      <source src="./static/images/case3.mp4 " type="video/mp4">
+        </video>
+
+
+    <video width="480" height="120" controls>
+      <source src="./static/images/case4.mp4 " type="video/mp4">
         </video>
     
   </div>
 </section>  
 
+  <p>
+VLM serves as a world model to generate unified image frame for predicting future world states: 
+    where perception results (e.g., lane divider and 3D detection) represent the future spatial 
+    relationships, and ordinary future frame represent the temporal evolution relationships.
+This spatio-temporal CoT then serves as intermediate reasoning steps, enabling the VLM to function 
+    as an inverse dynamics model for trajectory planning based on current observations and future predictions.
+  </p>
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -236,7 +249,11 @@
       <div class="column is-four-fifths">
         <div class="content has-text-justified">
           <p>
-            Qualitative analysis of our CoT. The red trajectory is the prediction and the green is the GT.
+            Qualitative analysis of our CoT. The red trajectory is the prediction and the green is the GT. 
+            Without spatial-temporal CoT, erroneous navigation inputs caused significant trajectory deviations
+            and potential collisions. Use correct instruction when reasoning our CoT, while still employing wrong
+            instruction for planning. However, FSDrive mitigated instruction errors through observation-based 
+            trajectory planning and future prediction, demonstrating its inverse dynamics modeling capability.
           </p>
         </div>
       </div>
