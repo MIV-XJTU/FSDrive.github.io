@@ -201,12 +201,30 @@
 </section> 
 
 
+<style>
+  /* 自定义列间距和行间距 */
+  .custom-video-columns {
+    margin-bottom: -1rem; /* 减小行间距 */
+  }
+
+  .custom-video-columns .column {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  /* 两端对齐文本 */
+  .text-justify {
+    text-align: justify;
+    text-justify: inter-word; /* 确保兼容性 */
+  }
+</style>
+
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title is-2 has-text-centered">Video</h2>
 
     <!-- 视频网格 -->
-    <div class="columns is-multiline is-variable is-4">
+    <div class="columns is-multiline is-variable is-4 custom-video-columns">
       <!-- 视频 1 -->
       <div class="column is-half">
         <figure class="image is-4by3 has-text-centered">
@@ -245,12 +263,12 @@
     </div>
 
     <!-- 描述文字 -->
-    <p class="has-text-centered mt-6">
+    <p class="text-justify mt-6">
       VLM serves as a world model to generate unified image frame for predicting future world states: 
-    where perception results (e.g., lane divider and 3D detection) represent the future spatial 
-    relationships, and ordinary future frame represent the temporal evolution relationships.
-This spatio-temporal CoT then serves as intermediate reasoning steps, enabling the VLM to function 
-    as an inverse dynamics model for trajectory planning based on current observations and future predictions.
+      where perception results (e.g., lane divider and 3D detection) represent the future spatial 
+      relationships, and ordinary future frame represent the temporal evolution relationships.
+      This spatio-temporal CoT then serves as intermediate reasoning steps, enabling the VLM to function 
+      as an inverse dynamics model for trajectory planning based on current observations and future predictions.
     </p>
   </div>
 </section>
